@@ -3,7 +3,7 @@ import React from 'react'
 export default function HomeUI(props){
     return (
         <div id="home"  className="page">
-            <h1>这是home组件</h1>
+            <h1>这是home组件啊</h1>
         </div>
     )
 }
