@@ -12,9 +12,11 @@ export default class Home extends Component{
     render(){
         return(
 
-            <HomeUI></HomeUI>
+            <HomeUI productList={this.productList.bind(this)}></HomeUI>
         )
     }
 
-
+    productList(){
+        this.props.history.push({pathname: '/home/productList', state: {Keyword: "水果"}});
+    }
 }

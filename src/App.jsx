@@ -8,6 +8,8 @@ import Shop from './pages/shop/Shop'
 import Mine from './pages/mine/Mine'
 import NotFind from './pages/NotFind'
 
+import ProductList from './conponents/productList/ProductList.jsx'
+
 import './App.css'
 
 export default class App extends Component{
@@ -41,7 +43,7 @@ export default class App extends Component{
                     }}/>
                 </Switch>
 
-                    {/* <Route path="/one/detail" component={Detail}/> */}
+                    <Route path="/home/productList" component={ProductList}/>
 
 
                 <nav className="tabs">
@@ -50,7 +52,6 @@ export default class App extends Component{
                     <Link className="tab" to="/eat">eat</Link>
                     <Link className="tab" to="/shop">shop</Link>
                     <Link className="tab" to="/mine">mine</Link>
-
                 </nav>
 
                 
