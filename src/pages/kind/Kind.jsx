@@ -13,7 +13,9 @@ export default class Kind extends Component {
                     <span>搜索</span>
                 </div>
                 <div className='content'>
-                
+                    <ul>
+                        <li><h1>1111</h1></li>
+                    </ul>
                 </div>
             </div>
         )
