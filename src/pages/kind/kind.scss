@@ -1,0 +1,41 @@
+.search-box{
+    position: relative;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    height: 40px;
+    background: white;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    .inp-box{
+        position: relative;
+        height: 28px;
+        width: 86%;
+        background: #f4f4f4;
+        border-radius: 20px;
+        background: #f4f4f4;
+        box-sizing: border-box;
+        .inp{
+            position: absolute;
+            display: inline-block;
+            height: 30px;
+            width: 80%;
+            font-size: 14px;
+            background: none;
+            outline: none;
+            border: none;
+            border-radius: 20px;
+            margin-left: 32px;
+            text-indent: 2px;
+        }
+    }
+    span{
+        position: absolute;
+        top: 0%;
+        right: 4%;
+        line-height: 40px;
+        font-size: 17px;
+        color: #11B57C;
+    }
+}
