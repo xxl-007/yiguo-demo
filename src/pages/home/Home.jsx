@@ -20,6 +20,10 @@ export default class Home extends Component{
                         <span className="search"><input type="text"/></span>
                 </header>
                 <div className="app-content" ref="scroll">
+
+                    {/* productList测试按钮 */}
+                    <button  onClick={this.productList.bind(this)}>测试</button>
+
                     <div className="wrap">
                         {/*轮播图部分 */}
                         <div className="first">
@@ -43,11 +47,8 @@ export default class Home extends Component{
                         <div className="first">1</div>
                         <div className="first">1</div>
                     </div>
-                </div>
 
-
-                {/* productList测试按钮 */}
-                <button onClick={this.productList.bind(this)}></button>
+                </div> 
             </div>
         )
     }
