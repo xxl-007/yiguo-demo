@@ -1,10 +1,22 @@
-import React, {Component} from 'react'
-export default class Kind extends Component{
+import React, { Component } from 'react'
+import './kind.scss'
 
-    render(){
+export default class Kind extends Component {
+
+    render() {
         return (
-            <div id="kind"  className="page">
-                <h1>这是kind组件</h1>
+            <div id="kind" className="page">
+                <div className='search-box'>
+                    <div className='inp-box'>
+                        <input type="text" className='inp' placeholder='请输入商品名称' />
+                    </div>
+                    <span>搜索</span>
+                </div>
+                <div className='content'>
+                    <ul>
+                        <li><h1>1111</h1></li>
+                    </ul>
+                </div>
             </div>
         )
 
