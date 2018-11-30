@@ -30,16 +30,6 @@ export default class Home extends Component{
                                     <div className="swiper-slide">Slide 3</div>
                                     <div className="swiper-slide">Slide 3</div>
                                     <div className="swiper-slide">Slide 3</div>
-
-<<<<<<< HEAD
-            <HomeUI productList={this.productList.bind(this)}></HomeUI>
-        )
-    }
-
-    productList(){
-        this.props.history.push({pathname: '/home/productList', state: {Keyword: "水果"}});
-    }
-=======
                                 </div>
                                 <div className="swiper-pagination">
                                 
@@ -54,6 +44,10 @@ export default class Home extends Component{
                         <div className="first">1</div>
                     </div>
                 </div>
+
+
+                {/* productList测试按钮 */}
+                <button onClick={this.productList.bind(this)}></button>
             </div>
         )
     }
@@ -79,7 +73,11 @@ export default class Home extends Component{
           })        
         
    }
->>>>>>> 892dfafd6cd58c946dfcc3904368f998324cadd1
+    // productList点击事件
+    productList(){
+        this.props.history.push({pathname: '/home/productList', state: {Keyword: "水果"}});
+    }
+
 }
 
 
