@@ -6,17 +6,20 @@ import Price from './conponents/price/Price'
 
 import './ProductList.scss'
 
+import {getProductList} from '../../services'
+
 export default class ProductList extends Component {
     constructor(){
         super();
         this.state = {
             data: ["销量","新品", "价格"],
             showIndex: 0,
+            product: [],
         }
     }
     
     render() {
-        let {data, showIndex} = this.state;
+        let {data, showIndex, product} = this.state;
 
         return (
             <div className="page subpage" id="productList">
@@ -34,7 +37,7 @@ export default class ProductList extends Component {
                 </ul>
 
                 <div className="content">
-                    {showIndex==0 && <Sale/>}
+                    {showIndex==0 && <Sale sale={product}/>}
                     {showIndex==1 && <New/>}
                     {showIndex==2 && <Price/>}
                 </div>
@@ -46,5 +49,14 @@ export default class ProductList extends Component {
     activeTab(index){
         console.log(index);
         this.setState({showIndex: index});
+    }
+
+    componentDidMount(){
+        getProductList().then((result)=>{
+            console.log("产品列表接收");
+            console.log(result);
+            console.log(result.Data.CommodityList);
+            this.setState({product: result.Data.CommodityList});
+        })
     }
 }

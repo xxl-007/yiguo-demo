@@ -9,7 +9,8 @@ export default class Home extends Component{
     constructor(){
         super();
         this.state = {
-            homedata:''
+            homedata:'',
+            productList: null
         }
     }
     render(){
@@ -55,8 +56,9 @@ export default class Home extends Component{
 
    componentDidMount(){
         getHomeData().then((result)=>{
-            console.log(result);
+            //console.log(result);
         })
+        
         var scroll=new window.IScroll(this.refs.scroll,{
             tap: true,
             click: true,
@@ -76,7 +78,7 @@ export default class Home extends Component{
    }
     // productList点击事件
     productList(){
-        this.props.history.push({pathname: '/home/productList', state: {Keyword: "水果"}});
+        this.props.history.push({pathname: '/home/productList'});  
     }
 
 }
